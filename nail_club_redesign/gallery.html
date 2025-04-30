@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | Slay by Rhy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Body and Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffe6f0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Brush Script MT', cursive;
+            color: #cc3366;
+            font-size: 2.5rem;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #cc3366;
+            font-weight: bold;
+        }
+
+        /* Gallery Section */
+        .container {
+            max-width: 1200px; /* Fixed width */
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #cc3366;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+            gap: 2rem;
+            justify-items: center;
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px; /* Uniform image height */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .price {
+            margin-top: 0.5rem;
+            font-weight: bold;
+            color: #cc3366; /* Price color */
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Slay by Rhy</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="book.html">Book</a>
+        <a href="receipt.html">Receipt</a>
+        <a href="queue.html">Queue</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Our Nail Art Gallery</h2>
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="0d214161-9b2c-4d3e-a3cf-bafb8c86fc4d.jpg" alt="Nail Design 1">
+            <div class="price">₱500</div>
+        </div>
+        <div class="gallery-item">
+            <img src="1a433348-27bd-44cd-8898-ecab1d5abeba.jpg" alt="Nail Design 2">
+            <div class="price">₱550</div>
+        </div>
+        <div class="gallery-item">
+            <img src="9b0b0367-0165-4fb3-a392-a7f69a67db75.jpg" alt="Nail Design 3">
+            <div class="price">₱600</div>
+        </div>
+        <div class="gallery-item">
+            <img src="229e4174-6190-4aa7-9a1b-5501a23011d2.jpg" alt="Nail Design 4">
+            <div class="price">₱580</div>
+        </div>
+        <div class="gallery-item">
+            <img src="249d4dec-9d8d-474f-8e40-03f21a1d03f9.jpg" alt="Nail Design 5">
+            <div class="price">₱620</div>
+        </div>
+        <div class="gallery-item">
+            <img src="833d6447-5cbe-401c-a8ad-d4b00d7d4b9d.jpg" alt="Nail Design 6">
+            <div class="price">₱550</div>
+        </div>
+        <div class="gallery-item">
+            <img src="42043c26-105f-4dc2-a4c6-3e4d86aadebe.jpg" alt="Nail Design 7">
+            <div class="price">₱600</div>
+        </div>
+        <div class="gallery-item">
+            <img src="581355a8-3961-4d94-8867-9568a89f5741.jpg" alt="Nail Design 8">
+            <div class="price">₱500</div>
+        </div>
+        <div class="gallery-item">
+            <img src="e7c63110-b18d-4cf7-8dc2-03a7d773b269.jpg" alt="Nail Design 9">
+            <div class="price">₱580</div>
+        </div>
+        <div class="gallery-item">
+            <img src="f7f910c3-bbad-4d33-8233-1d34497a11ba.jpg" alt="Nail Design 10">
+            <div class="price">₱620</div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
