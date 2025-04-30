@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slaybyrhy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Center the page content */
+        body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+}
+
+header {
+    background-color: #ffe6f0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Brush Script MT', cursive;
+    color: #cc3366;
+    font-size: 2.5rem;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #cc3366;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 5%;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    color: #cc3366;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text a {
+    background-color: #cc3366;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #cc3366;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            color: #cc3366;
+            margin-bottom: 1.5rem;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form input,
+        form select,
+        form button {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            background-color: #cc3366;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ff80bf;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-home a {
+            color: #cc3366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Nail Club</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="book.html">Book</a>
+        <a href="receipt.html">Receipt</a>
+        <a href="queue.html">Queue</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Book Your Appointment</h2>
+    <p>Fill in your details and select a nail design from the options below.</p>
+
+    <form id="booking-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="nail-design">Choose a Nail Design:</label>
+<select id="nail-design" name="nail-design" required>
+    <!-- Basic Nail Care -->
+    <option value="manicure">Manicure – ₱200</option>
+    <option value="pedicure">Pedicure – ₱250</option>
+    <option value="mani-pedi-package">Mani-Pedi Package – ₱400</option>
+
+    <!-- Gel Services -->
+    <option value="gel-manicure">Gel Manicure – ₱500</option>
+    <option value="gel-pedicure">Gel Pedicure – ₱600</option>
+    <option value="gel-removal">Gel Removal – ₱120</option>
+    <option value="gel-mani-pedi-package">Gel Mani-Pedi Package – ₱1,000</option>
+
+    <!-- Nail Art & Add-Ons -->
+    <option value="basic-nail-art">Basic Nail Art (per nail) – ₱30</option>
+    <option value="full-set-nail-art">Full Set Nail Art – ₱200</option>
+    <option value="chrome-aura-cat-eye">Chrome / Aura / Cat Eye – ₱150</option>
+    <option value="stickers-gems-foils">Stickers / Gems / Foils – ₱200</option>
+
+    <!-- Extensions -->
+    <option value="acrylic-full-set">Acrylic Full Set – ₱1,000</option>
+    <option value="soft-gel-extensions">Soft Gel Extensions – ₱1,200</option>
+    <option value="polygel-extensions">Polygel Extensions – ₱1,300</option>
+    <option value="refill">Refill – ₱600</option>
+    <option value="removal">Removal – ₱200</option>
+
+    <!-- Add-On Treatments -->
+    <option value="foot-spa">Foot Spa – ₱300</option>
+    <option value="paraffin-wax">Paraffin Wax (Hands) – ₱250</option>
+    <option value="cuticle-care-hand-massage">Cuticle Care / Hand Massage – ₱150</option>
+</select>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+</main>
+
+
+
+<script>
+    document.getElementById("booking-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Get user input
+        const name = document.getElementById("name").value;
+        const nailDesign = document.getElementById("nail-design").value;
+        const priceMap = {
+            "manicure": "₱200",
+            "pedicure": "₱250",
+            "mani-pedi-package": "₱400",
+            "gel-manicure": "₱500",
+            "gel-pedicure": "₱600",
+            "full-set-nail-art": "₱200",
+            "acrylic-full-set": "₱1,000",
+            "soft-gel-extensions": "₱1,200"
+        };
+
+        const price = priceMap[nailDesign];
+        const dateTime = new Date().toLocaleString();  // Current date and time
+
+        // Save to localStorage
+        const bookingData = { name, nailDesign, price, dateTime };
+        let queue = JSON.parse(localStorage.getItem("queue")) || [];
+        queue.push(bookingData);
+        localStorage.setItem("queue", JSON.stringify(queue));
+
+        // Redirect to receipt page after booking
+        window.location.href = "receipt.html";
+    });
+</script>
+
+</body>
+</html>
