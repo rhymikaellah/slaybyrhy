@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slaybyrhy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center; 
+        }
+
+        header {
+            background-color: #ffe6f0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Brush Script MT', cursive;
+            color: #cc3366;
+            font-size: 2.5rem;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #cc3366;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            color: #cc3366;
+            margin-bottom: 1.5rem;
+        }
+
+        .queue-list {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-home a {
+            color: #cc3366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Slay by Rhy</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="book.html">Book</a>
+        <a href="receipt.html">Receipt</a>
+        <a href="queue.html">Queue</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Queue</h2>
+    <p>Here are the customers who have booked their appointments:</p>
+
+    <div id="queue-list" class="queue-list">
+        <!-- Queue list will be displayed here -->
+    </div>
+
+    
+</main>
+
+<script>
+    const queue = JSON.parse(localStorage.getItem("queue")) || [];
+    const queueList = document.getElementById("queue-list");
+
+    if (queue.length > 0) {
+        queueList.innerHTML = queue.map((booking, index) => 
+            `<p>${index + 1}. ${booking.name}</p>`
+        ).join("");
+    } else {
+        queueList.innerHTML = "<p>No customers in queue.</p>";
+    }
+</script>
+
+</body>
+</html>
